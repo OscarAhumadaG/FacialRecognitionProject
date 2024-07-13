@@ -577,18 +577,18 @@ def SignIn():
 
 
 # Path
-OutFolderPathUser = '/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/DataBase/Users'
-PathUserCheck = '/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/DataBase/Users'
-OutFolderPathFace = '/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/DataBase/FaceImages'
+OutFolderPathUser = '../DataBase/Users'
+PathUserCheck = '../DataBase/Users'
+OutFolderPathFace = '../DataBase/FaceImages'
 
 
 # Read Images
 #img_info = cv2.imread('/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/BtSign.png')
-img_check = cv2.imread('/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/check.png')
-img_Step0 = cv2.imread('/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/Step0.png')
-img_Step1 = cv2.imread('/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/Step1.png')
-img_Step2 = cv2.imread('/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/Step2.png')
-img_LvCheck = cv2.imread('/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/LivenessCheck.png')
+img_check = cv2.imread('../SetUp/check.png')
+img_Step0 = cv2.imread('../SetUp/Step0.png')
+img_Step1 = cv2.imread('../SetUp/Step1.png')
+img_Step2 = cv2.imread('../SetUp/Step2.png')
+img_LvCheck = cv2.imread('../SetUp/LivenessCheck.png')
 
 
 
@@ -629,12 +629,12 @@ screen.title('Facial Recognition System')
 screen.geometry('1280x720')
 
 # Background
-BG_Imagen = PhotoImage(file='/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/Inicio.png')
+BG_Imagen = PhotoImage(file='../SetUp/Inicio.png')
 background = Label(image = BG_Imagen, text = "Start")
 background.place(x = 0, y = 0, relwidth = 1, relheight = 1)
 
 # Profile
-BG_Image2 = PhotoImage(file='/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/Back2.png')
+BG_Image2 = PhotoImage(file='../SetUp/Back2.png')
 
 # Input User Information for Sign Up
 
@@ -664,13 +664,13 @@ InputPassLog.place(x=650, y=500)
 # Buttons
 # 1. Sign up
 
-imageBS = PhotoImage(file='/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/BtSign.png')
+imageBS = PhotoImage(file='../SetUp/BtSign.png')
 BtSign = Button(screen, text='Sign up',image=imageBS, height='40', width='200', command=SignUp)
 BtSign.place(x=300, y=580)
 
 
 # 2. Sign In
-imageBL = PhotoImage(file='/home/oscar-ahumada/Documents/Machine Learning/Facial Recognition Project/Facial Recognition AntiSpoofing/SetUp/BtLogin.png')
+imageBL = PhotoImage(file='../SetUp/BtLogin.png')
 BtLogin = Button(screen, text='Login In',image=imageBL, height='40', width='200', command=SignIn)
 BtLogin.place(x=900, y=580)
 
