@@ -82,7 +82,7 @@ def Profile():
 
         ImgUser = cv2.cvtColor(ImgUser, cv2.COLOR_RGB2BGR)
         ImgUser = Image.fromarray(ImgUser)
-
+        ImgUser = ImgUser.resize((400, 400))
 
         IMG = ImageTk.PhotoImage(image=ImgUser)
 
