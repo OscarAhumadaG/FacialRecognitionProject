@@ -411,7 +411,7 @@ def BiometricLog():
                                                     blink = False
 
                                                 cv2.putText(frame, f'Blinking: {int(count)}', (1070, 375),
-                                                            cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 255, 255), 1)
+                                                            cv2.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 0), 1)
 
                                                 if count >= 3:
                                                     h_check, w_check, c = img_check.shape
@@ -590,7 +590,10 @@ img_Step1 = cv2.imread('../SetUp/Step1.png')
 img_Step2 = cv2.imread('../SetUp/Step2.png')
 img_LvCheck = cv2.imread('../SetUp/LivenessCheck.png')
 
-
+img_Step0 = cv2.cvtColor(img_Step0, cv2.COLOR_RGB2BGR)
+img_Step1 = cv2.cvtColor(img_Step1, cv2.COLOR_RGB2BGR)
+img_Step2 = cv2.cvtColor(img_Step2, cv2.COLOR_RGB2BGR)
+img_LvCheck = cv2.cvtColor(img_LvCheck, cv2.COLOR_RGB2BGR)
 
 
 # Variables
@@ -655,24 +658,24 @@ InputPassReg.place(x=110, y=540)
 
 # 1. Username
 InputUserLog = Entry(screen)
-InputUserLog.place(x=650, y=380)
+InputUserLog.place(x=890, y=500)
 
 # 3. Password
 InputPassLog = Entry(screen)
-InputPassLog.place(x=650, y=500)
+InputPassLog.place(x=890, y=540)
 
 # Buttons
 # 1. Sign up
 
 imageBS = PhotoImage(file='../SetUp/BtSign.png')
 BtSign = Button(screen, text='Sign up',image=imageBS, height='40', width='200', command=SignUp)
-BtSign.place(x=300, y=580)
+BtSign.place(x=110, y=580)
 
 
 # 2. Sign In
 imageBL = PhotoImage(file='../SetUp/BtLogin.png')
 BtLogin = Button(screen, text='Login In',image=imageBL, height='40', width='200', command=SignIn)
-BtLogin.place(x=900, y=580)
+BtLogin.place(x=860, y=580)
 
 
 screen.mainloop()
