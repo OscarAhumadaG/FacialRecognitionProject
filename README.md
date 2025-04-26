@@ -66,21 +66,33 @@ Edit
 python recognize_faces_video.py
 ```
 
-🖼 How It Works
-Dataset Preparation: Place images of known individuals in the dataset/ folder. Each image filename should correspond to the person's name.
+## 🖼 How It Works
 
-Face Encoding: The scripts encode known faces.
+1. **Dataset Preparation**  
+   Place images of known individuals in the `dataset/` folder. Each image filename should correspond to the person's name. This dataset is used to encode known faces for future recognition.
 
-Recognition: The model detects faces in new images or videos and matches them with the known dataset.
+2. **Face Encoding**  
+   The system processes the images and encodes the faces into a numerical format that can be easily compared. This encoding is stored and used for face recognition during the detection phase.
 
-📈 Future Improvements
-Improve recognition accuracy with better preprocessing.
+3. **Face Recognition**  
+   The model detects faces in new images or video streams. Once faces are detected, the system compares the encoded features with those from the known dataset to identify the individual.
 
-Add GUI interface for easier use.
+---
 
-Integrate deep learning models for face detection (e.g., MTCNN).
+## 📈 Future Improvements
 
-Expand to multiple camera inputs.
+- **Enhanced Recognition Accuracy**  
+  Improve the model's recognition accuracy by refining the preprocessing pipeline, such as better image alignment, data augmentation, or improved face encoding techniques.
+
+- **Graphical User Interface (GUI)**  
+  Develop a user-friendly GUI to simplify the usage of the facial recognition system, making it more accessible for non-technical users.
+
+- **Deep Learning Integration**  
+  Integrate advanced deep learning models for more robust face detection, such as **MTCNN** (Multi-task Cascaded Convolutional Networks), for better face alignment and detection in complex scenarios.
+
+- **Multiple Camera Support**  
+  Extend the system to support multiple camera inputs, enabling simultaneous face recognition from multiple video feeds for larger-scale applications.
+
 
 📄 License
 This repository is licensed under the MIT License.
