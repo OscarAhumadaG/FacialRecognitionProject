@@ -85,6 +85,3 @@ Expand to multiple camera inputs.
 📄 License
 This repository is licensed under the MIT License.
 
-✨ About Me
-Oscar Darío Ahumada Gómez
-LinkedIn • GitHub
